@@ -2,7 +2,7 @@
 
 Name: 8821cu
 Version: 20230122.a0c1897
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Common files for 8821CU driver
 
 %global gitref a0c18978d1c9ab89f96083354f2c55cf15d483f7
@@ -30,8 +30,8 @@ echo "Nothing to build"
 
 
 %install
-install -m 0755 -d %{buildroot}%{_modprobedir}
-install -p -m 0644 %{modname}.conf %{_sysconfdir}/modprobe.d/
+install -m 0755 -d %{buildroot}%{_sysconfdir}/modprobe.d
+install -p -m 0644 %{modname}.conf %{buildroot}%{_sysconfdir}/modprobe.d
 install -m 0755 -d %{buildroot}%{_docdir}/%{name}
 install -m 0755 -d %{buildroot}%{_licensedir}/%{name}
 
